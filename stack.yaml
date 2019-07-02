@@ -1,0 +1,6 @@
+resolver: lts-13.25
+
+templates:
+  params:
+    copyright: Copyright (c) 2016-2019 Scale Genius, Inc
+    github-username: scalegenius

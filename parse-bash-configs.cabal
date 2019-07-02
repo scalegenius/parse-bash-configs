@@ -1,0 +1,43 @@
+name:                parse-bash-configs
+version:             0.2.0.0
+synopsis:            Basic Bash Array parsing
+
+description:         Parse Bash Arrays in Configuration Files
+license:             BSD3
+license-file:        LICENSE
+author:              Chad Slaughter
+maintainer:          chad@scalegenius.com
+copyright:           2016-2019 (c) Scale Genius, Inc
+category:            Data
+build-type:          Simple
+extra-source-files:  
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     Data.BasicBashConfig 
+  other-extensions:    OverloadedStrings
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  build-depends:       base
+                     , bytestring
+                     , attoparsec
+                     , containers
+
+test-suite tests
+  type:           exitcode-stdio-1.0
+  main-is:        test_main.hs
+  hs-source-dirs: tests
+  ghc-options:   -threaded
+  default-language: Haskell2010
+  build-depends:       base
+                     , attoparsec
+                     , bytestring
+                     , containers
+                     , text
+                     , interpolatedstring-perl6
+                     , HUnit
+                     , hspec
+                     , tasty
+                     , tasty-hunit
+                     , parse-bash-configs
+
